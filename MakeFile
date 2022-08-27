@@ -1,0 +1,13 @@
+all: compile link run
+
+compile:
+	gcc -c ./src/main.c -I"F:\Codes\Windows\Application\include"
+
+link:
+	gcc.exe main.o -o ./bin/main.exe -L"F:\Codes\Windows\Application\lib" -lgdi32 -lgdiplus
+	
+run:
+	./bin/main.exe 
+
+clean:
+	rm -f *.o
